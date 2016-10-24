@@ -1,0 +1,74 @@
+$hfont:'Abel', sans-serif;
+$pfont: 'Work Sans', sans-serif;
+$lightgreen: #BDDDD0;
+$darkgreen: #91C7B1;
+$red: #B33951;
+$yellow: #E3D081;
+$grey: #2F3030;
+$ivory: #FEFDFB;
+
+html {
+	font-size: 10px;
+}
+
+p {
+	font-family: $pfont;
+	color: $grey;
+	font-size: 2.4rem;
+	line-height: 3rem;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+h1 {
+	font-family: $pfont;
+	text-transform: uppercase;
+	color: $lightgreen;
+	letter-spacing: 0.3rem;
+	font-size: 3.5rem;
+	font-size: 10vw;
+
+	span {
+		font-family: $hfont;
+		color: $darkgreen;
+		font-size: 15rem;
+		font-size: 43vw;
+		letter-spacing: -0.3rem;
+		line-height: 40vw;
+	}
+}
+
+body {
+	background: $ivory;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+	fieldset {
+		border: none;
+		width: 100%;
+		max-width: 800px;
+		display: flex;
+		flex-direction: row;
+
+		input[type=text] {
+			display: inline;
+		}
+	}
+
+
+
+

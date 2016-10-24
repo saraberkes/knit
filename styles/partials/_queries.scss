@@ -1,0 +1,25 @@
+@media all and(min-width: 480px){
+	h1 {
+		font-family: $pfont;
+		text-transform: uppercase;
+		color: $lightgreen;
+		letter-spacing: 0.3rem;
+		font-size: 4.5rem;
+
+		span {
+			font-family: $hfont;
+			font-size: 20rem;
+			letter-spacing: -0.3rem;
+			line-height: 18rem;
+		}
+	}
+
+	#inputSection {
+		min-height: 300px;
+	}
+
+	.inputSection {
+		min-height: 300px;
+	}
+}
+

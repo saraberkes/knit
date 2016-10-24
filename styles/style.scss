@@ -1,0 +1,515 @@
+@import'partials/setup';
+@import'partials/base';
+
+
+.wrapper {
+	max-width: 700px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.patternTypeFilter, .inputSection, .outputSection {
+	display: none;
+}
+
+//header section starts here
+
+header {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+	.logoImageBackground {
+		width: 86px;
+		height: 86px;
+		border: 2px solid $yellow;
+		border-radius: 50%;
+		margin: 30px auto 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logoImage {
+		width: 74px;
+		height: 74px;
+		background: $yellow;
+		border-radius: 50%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.knittingNeedles {
+			fill: white;
+			width: 75%;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+.yellowbg {
+	width: 100%;
+	background: $yellow;
+	padding: 30px 0;
+
+	p {
+		color: white;
+	}
+}
+
+.downArrow {
+	margin-top: 30px;
+	background: $grey;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s;
+
+	&:hover, &:focus {
+		background: $red;
+		opacity: 1;
+	}
+
+	a {
+		font-size: 4rem;
+		text-align: center;
+		color: white;
+		text-decoration: none;
+		padding: 50%;
+	}
+}
+
+//searchType filter starts here
+
+.yarnImage {
+	width: 150px;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+
+.ballOfYarn {
+	fill: $yellow;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: -10%;
+}
+
+input[type=radio]{
+	display: none;
+}
+
+li {
+	text-align: center;
+	margin-bottom: 20px;
+	width: 315px;
+
+	.buttonLabel {
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: $hfont;
+		font-size: 2.3rem;
+		padding: 5px;
+		color: white;
+		text-transform: uppercase;
+		background: $darkgreen;
+		width: 100%;
+		height: 70px;
+		border-radius: 18px;
+		cursor: pointer;
+		transition: 0.2s;
+
+		&:hover, &:focus {
+			background: $grey;
+			opacity: 1;
+		}
+	}
+}
+
+//patternType section starts here
+
+.castOnImage {
+	width: 200px;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+
+.castOnYarn {
+	fill: $yellow;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: -25%;
+}
+
+//input images are styled here
+.yarnHomeImage {
+	width: 150px;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+
+.yarnRug {
+	fill: $yellow;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: -25%;
+}
+
+.yarnClothingImage {
+	width: 150px;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+
+.yarnMittens {
+	fill: $yellow;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: -15%;
+}
+
+
+//input section starts here 
+
+.inputSection {
+	height: 100vh;
+	min-height: 900px;
+}
+
+input {
+	// position: relative;
+	background: transparent;
+	padding: 0 5px;
+}
+
+input:focus{
+	outline: none;
+}
+
+input[name=yardage] {
+	border: none;
+	width: 150px;
+	border-bottom: 1px solid black;
+}
+
+input[name=fiber] {
+	border: none;
+	width: 200px;
+	border-bottom: 1px solid black;
+}
+
+input[name=patternCategory] {
+	border: none;
+	width: 300px;
+	border-bottom: 1px solid black;
+}
+
+select {
+	border: 1px solid black;
+	border-radius: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 5px 10px;
+	width: 200px;
+	background-image: url('../assets/dropdown_arrow.svg');
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	background-size: 20px 20px;
+}
+
+
+input[type=submit], button {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $hfont;
+	font-size: 2.3rem;
+	padding: 5px;
+	color: white;
+	text-transform: uppercase;
+	background: $darkgreen;
+	width: 315px;
+	height: 70px;
+	border-radius: 18px;
+	cursor: pointer;
+	border: none;
+	transition: 0.2s;
+
+	&:hover, &:focus {
+		background: $grey;
+		opacity: 1;
+	}
+}
+
+.labelInput {
+	position: relative;
+	width: 150px;
+	}
+
+form {
+
+	p {
+		line-height: 6rem;
+	}
+
+	label {
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		width: 100%;
+		font-family: $pfont;
+		color: $darkgreen;
+		position: absolute;
+		bottom: -75%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		padding: 0;
+		margin: 0;
+	}
+}
+
+h2 {
+	font-family: $pfont;
+	font-size: 2.4rem;
+	letter-spacing: 0.2rem;
+	color: $yellow;
+	text-align: center;
+}
+
+//output Section
+
+.outputSection {
+	height: auto;
+	width: 100%;
+	margin: 0 auto;
+
+	.yellowbg{
+		width: 100%;
+		padding: 30px 0;
+		margin-top: -20px;
+		margin-bottom: 50px;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	h2 {
+		font-family: $hfont;
+		font-size: 2.5rem;
+		line-height: 2.8rem;
+		color: $darkgreen;
+		text-transform: uppercase;
+		padding-bottom: 0;
+		margin-bottom: 10px;
+	}
+
+	a {
+		font-size: 2rem;
+		line-height: auto;
+		color: white;
+		padding: 15px 20px;
+		font-family: $hfont;
+		text-transform: uppercase;
+		background: $darkgreen;
+		border-radius: 18px;
+		text-decoration: none;
+
+		&:hover, &:focus {
+			background: $grey;
+		}
+	}
+
+	p {
+		margin-bottom: 50px;
+	}
+
+	ul {
+		margin-bottom: 50px;
+	}
+
+	li {
+		font-family: $pfont;
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+		width: 100%;
+	}
+
+	.divImage {
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+
+		img {
+			width: 150%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	button {
+		background: $red;
+		text-decoration: none;
+		margin-bottom: 20px;
+		width: 310px;
+
+		&:hover, &:focus {
+			background: $grey;
+		}
+	}
+
+	.knitNeedles {
+		width: 150px;
+		height: 150px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+
+	.knitNeedlesImage {
+		fill: $yellow;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+	}
+
+	.outputButtons {
+		width: 100%;
+		margin-bottom: 50px;
+
+		.startOverButton {
+			width: 310px;
+			height: 70px;
+			background: $red;
+			border-radius: 18px;
+			display: flex;
+			margin: 0 auto;
+			justify-content: center;
+			align-items: center;
+
+			&:hover, &:focus {
+				background: $grey;
+			}
+		
+			a {
+				text-align: center;
+				margin: 0 auto;
+				font-family: $hfont;
+				font-size: 2.3rem;
+				width: 310px;
+				background: transparent;
+				border-radius: 18px;
+				color: white;
+				width: 100%;
+				text-transform: uppercase;
+				cursor: pointer;
+				border: none;
+				transition: 0.2s;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.item {
+		padding-bottom: 20px;
+		width: 300px;
+		padding-top: 40px;
+		position: relative;
+		border-bottom: 1px solid black;
+
+		&:last-child {
+			border-bottom: none;
+
+			&:after {
+				content: '';
+			}
+		}
+
+		&:after {
+			content:'or';
+			position:absolute;
+			color:black;
+			font-family: $pfont;
+			font-size: 1.8rem;
+			padding: 0 20px;
+			left:50%;
+			bottom: 0;
+			transform:translate(-50%, 50%);
+			background:$ivory;
+
+		}
+	}
+}
+
+footer {
+	background: $yellow;
+	font-family: $pfont;
+	font-size: 1.8rem;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+
+	a {
+		color: white;
+
+		&:hover, &:focus {
+			color: $grey;
+		}
+	}
+}
+
+@media all and(min-width: 860px){
+	.outputItems {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.divImage {
+		width: 200px;
+		height: 200px;
+	}
+
+.outputSection {
+	.item {
+		margin-right: 30px;
+		width: 250px;
+		border-bottom: none;
+
+		&:last-child {
+			border-bottom: none;
+			margin-right: 0;
+
+			&:after {
+				content:'';
+			}
+		}
+
+		&:after {
+			content:'';
+
+			}
+		}
+	}
+}
+
+
+@import'partials/queries';

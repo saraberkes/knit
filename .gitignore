@@ -1,0 +1,6 @@
+.ds_store
+*.txt
+proxy.php
+assets
+Requests-1.7.0
+prepros.cfg
