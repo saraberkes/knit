@@ -69,6 +69,44 @@ section {
 		}
 	}
 
+.select2-container--default .select2-selection--single {
+	border: 1px solid black;
+	background-color: transparent;
+	border-radius: 0px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 33px;
 
+	b {
+		border-color: black transparent transparent transparent;
+	}
+}
 
+.select2-container--default .select2-results>.select2-results__options {
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-family: $pfont;
+	color: $grey;
+	font-size: 2.4rem;
+	text-align: center;
+	width: 200px;
+}
+
+.select2-results__option {
+	text-align: left;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background-color: $yellow;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+	font-family: $pfont;
+	color: $grey;
+	font-size: 2.4rem;
+}

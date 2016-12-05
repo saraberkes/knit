@@ -228,6 +228,48 @@ fieldset input[type=text] {
   display: inline;
 }
 
+.select2-container--default .select2-selection--single {
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 0px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 33px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: black transparent transparent transparent;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: "Work Sans", sans-serif;
+  color: #2F3030;
+  font-size: 2.4rem;
+  text-align: center;
+  width: 200px;
+}
+
+.select2-results__option {
+  text-align: left;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #E3D081;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  font-family: "Work Sans", sans-serif;
+  color: #2F3030;
+  font-size: 2.4rem;
+}
+
 .wrapper {
   max-width: 700px;
   width: 95%;
@@ -438,7 +480,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 5px 10px;
-  width: 200px;
+  width: 190px;
   background-image: url("../assets/dropdown_arrow.svg");
   background-repeat: no-repeat;
   background-position: 95% 50%;
@@ -569,11 +611,13 @@ h2 {
 }
 
 .outputSection .divImage img {
-  width: 150%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .outputSection button {
@@ -697,6 +741,9 @@ footer a:hover, footer a:focus {
     margin-right: 30px;
     width: 250px;
     border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .outputSection .item:last-child {
     border-bottom: none;

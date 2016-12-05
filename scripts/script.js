@@ -65,6 +65,9 @@ knitApp.displayPatterns = function(patterns){
 		if(knitApp.yarnHomeObj.weight === ''){
 			 knitApp.yarnHomeObj.weight = 'any';
 		}
+		if(knitApp.yarnHomeObj.fibertype === ''){
+			knitApp.yarnHomeObj.fibertype = 'any';
+		}
 		console.log(knitApp.yarnHomeObj);
 		$('.userIndicated').append(`<li><span style='color:#91C7B1; text-transform: uppercase'> Pattern Type:</span> ${knitApp.yarnHomeObj.pattern} </li>
 			<li><span style='color:#91C7B1; text-transform: uppercase'>Yarn Weight:</span> ${knitApp.yarnHomeObj.weight} </li>
@@ -77,6 +80,9 @@ knitApp.displayPatterns = function(patterns){
 		if(knitApp.yarnClothingObj.weight === ''){
 			knitApp.yarnClothingObj.weight = 'any';
 		}
+		if(knitApp.yarnClothingObj.fibertype === ''){
+			knitApp.yarnClothingObj.fibertype = 'any';
+		}
 		$('.userIndicated').append(`<li><span style='color:#91C7B1; text-transform: uppercase'> Pattern Type:</span> ${knitApp.yarnClothingObj.pattern} </li>
 			<li><span style='color:#91C7B1; text-transform: uppercase'>Age & Gender:</span> ${knitApp.yarnClothingObj.fit} </li>
 			<li><span style='color:#91C7B1; text-transform: uppercase'>Yarn Weight:</span> ${knitApp.yarnClothingObj.weight} </li>
@@ -87,6 +93,9 @@ knitApp.displayPatterns = function(patterns){
 		if(knitApp.patternHomeObj.weight === ''){
 			knitApp.patternHomeObj.weight = 'any';
 		}
+		if(knitApp.patternHomeObj.fibertype === ''){
+			knitApp.patternHomeObj.fibertype = 'any';
+		}
 		$('.userIndicated').append(`<li><span style='color:#91C7B1; text-transform: uppercase'> Pattern Type:</span> ${knitApp.patternHomeObj.pattern} 
 			<li><span style='color:#91C7B1; text-transform: uppercase'>Yarn Weight:</span> ${knitApp.patternHomeObj.weight} 
 			<li><span style='color:#91C7B1; text-transform: uppercase'>Fiber Type:</span> ${knitApp.patternHomeObj.fibertype}`)
@@ -94,6 +103,9 @@ knitApp.displayPatterns = function(patterns){
 	} if(knitApp.selectedForm === 'patternClothing'){
 		if(knitApp.patternClothingObj.weight === ''){
 			knitApp.patternClothingObj.weight = 'any';
+		}
+		if(knitApp.patternClothingObj.fibertype === ''){
+			knitApp.patternClothingObj.fibertype = 'any';
 		}
 		$('.userIndicated').append(`<li><span style='color:#91C7B1; text-transform: uppercase'> Pattern Type:</span> ${knitApp.patternClothingObj.pattern} 
 			<li><span style='color:#91C7B1; text-transform: uppercase'>Age & Gender:</span> ${knitApp.patternClothingObj.fit}
@@ -206,6 +218,10 @@ $('#yarnInputHome').on('submit', function(e){
 			var yarnWeightHome = '';
 		}
 
+		if(yarnFiberHome === 'any'){
+			var yarnFiberHome = '';
+		}
+
 		knitApp.yarnHomeObj = {
 			pattern: yarnPatternCategoryHome,
 			weight: yarnWeightHome,
@@ -248,6 +264,10 @@ $('#yarnInputClothing').on('submit', function(e){
 			var yarnWeightClothing = '';
 		}
 
+		if(yarnFiberClothing === 'any'){
+			var yarnFiberClothing = '';
+		}
+
 		knitApp.yarnClothingObj = {
 			pattern: yarnPatternCategoryClothing,
 			weight: yarnWeightClothing,
@@ -259,7 +279,7 @@ $('#yarnInputClothing').on('submit', function(e){
 		knitApp.selectedForm = 'yarnClothing';
 		knitApp.getPatterns(knitApp.yarnClothingObj);
 
-			// REMOVE FIELDSET AND FADE IN OUTPUT. (removing fieldset is to prevent users from clicking multiple submits)
+			// REMOVE FIELDSET AND FADE IN OUTPUT
 			$('fieldset').fadeOut();
 			$('.searchTypeFilter').fadeOut();
 			$('.patternTypeFilter').fadeOut();
@@ -287,6 +307,9 @@ $('#patternInputHome').on('submit', function(e){
 	if(patternYarnWeightHome === 'any'){
 			var patternYarnWeightHome = '';
 		}
+	if(patternFiberHome === 'any'){
+			var patternFiberHome = '';
+	}
 
 	knitApp.patternHomeObj = {
 		pattern: patternCategoryHome,
@@ -327,6 +350,9 @@ $('#patternInputClothing').on('submit', function(e){
 	if(patternYarnWeightClothing === 'any'){
 			var patternYarnWeightClothing = '';
 		}
+	if(fiberClothing === 'any'){
+			var fiberClothing = '';
+	}
 
 	knitApp.patternClothingObj = {
 		pattern: patternCategoryClothing,
@@ -386,11 +412,8 @@ $(function(){
 	knitApp.init();
 });
 
-// //selectize Function
-// $('#yarnWeightClothing').selectize({
-// 	create: true,
-// 	sortField: 'text'
-// });
+//select function
+$('select').select2();
 
 //smooth scroll
 $('a').smoothScroll({
