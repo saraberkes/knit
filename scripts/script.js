@@ -24,6 +24,7 @@ knitApp.getPatterns = function(object){
 		}
 	}) 	.then(function(patternData){
 		knitApp.displayPatterns(patternData.patterns);
+		$('.spinner').fadeOut();
 	});
 }; //this is the end of the getPatterns function (with ajax)
 
@@ -31,11 +32,21 @@ knitApp.displayPatterns = function(patterns){
 	$('.outputItems').empty();
 	console.log('inside displayPatterns: ', patterns);
 	knitApp.patterns = patterns;
+		if(knitApp.patterns.length === 0) {
+			console.log('nopatterns');
+			$('.indicated').fadeOut();
+			$('.yellowbg').fadeOut();
+			$('.threeNew').fadeOut();
+			$('.knitNeedles').fadeOut();
+			$('.spinner').fadeOut();
+			$('.userIndicated').html('<p>Sorry, no patterns matched your criteria.<br/>Try being less specific—it often yields better results!</p>')
+		}
 	
 	//looping through patterns to display 3 random patterns
 	for(var i = 0; i < 3; i++){
 
 		var randomItem = randomPattern(patterns);
+
 
 		//using jQuery, create a div to act as a container for each pattern
 		var $patternContainer = $('<div>').addClass('item');
