@@ -18,6 +18,7 @@ p {
 	line-height: 3rem;
 	text-align: center;
 	margin-bottom: 50px;
+	font-weight: 300;
 }
 
 h1 {
@@ -27,6 +28,7 @@ h1 {
 	letter-spacing: 0.3rem;
 	font-size: 3.5rem;
 	font-size: 10vw;
+	font-weight: 300;
 
 	span {
 		font-family: $hfont;
@@ -36,6 +38,10 @@ h1 {
 		letter-spacing: -0.3rem;
 		line-height: 40vw;
 	}
+}
+
+h6 {
+	font-weight: 300;
 }
 
 body {
@@ -62,7 +68,7 @@ section {
 		width: 100%;
 		max-width: 800px;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 
 		input[type=text] {
 			display: inline;
