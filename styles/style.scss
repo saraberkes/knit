@@ -232,12 +232,14 @@ select {
 	background-size: 20px 20px;
 }
 
+fieldset.submit {
+	text-align: center;
+	display: block;
+}
+
 
 input[type=submit], button {
 	margin: 0 auto;
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
 	font-family: $hfont;
 	font-size: 2.3rem;
 	padding: 5px;
@@ -369,7 +371,7 @@ h2 {
 		font-size: 2rem;
 		line-height: auto;
 		color: white;
-		padding: 15px 20px;
+		padding: 15px 18px;
 		font-family: $hfont;
 		text-transform: uppercase;
 		background: $darkgreen;
